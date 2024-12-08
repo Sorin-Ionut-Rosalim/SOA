@@ -1,0 +1,12 @@
+# Binaries
+/bin/
+/obj/
+
+# OS Files
+*.DS_Store
+
+# Go Dependencies
+/vendor/
+
+# Logs
+*.log
