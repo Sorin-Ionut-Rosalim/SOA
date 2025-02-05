@@ -1,0 +1,14 @@
+# Use OpenJDK 17 on Alpine
+FROM openjdk:23
+
+# Create an app directory and set it as the working directory
+WORKDIR /app
+
+# Copy your built JAR into the container
+COPY target/identity-service.jar identity-service.jar
+
+# Expose the port your service runs on (if you want clarity, not strictly required for K8s)
+EXPOSE 8081
+
+# Run the JAR
+ENTRYPOINT ["java", "-jar", "/app/identity-service.jar"]
